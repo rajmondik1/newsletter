@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    nginx-service:
+        image: nginx:stable-alpine
+        container_name: nginx-container
+        ports:
+            - "80:80"
+        volumes:
+            # project dir : dir in docker
+            - ./app:/var/www/project
+            - ./nginx/templates:/etc/nginx/templates
+        environment:
+            - NGINX_HOST=localhost
+            - NGINX_PORT=80
+        depends_on:
+            - php-service
+
+    php-service:
+        build:
+            context: .
+            dockerfile: ./php/Dockerfile
+        container_name: php-container
+        ports:
+            - "9000:9000"
+        volumes:
+            - ./app:/var/www/project
