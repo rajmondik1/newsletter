@@ -6,7 +6,6 @@ use App\Entity\NewsletterSubscription;
 use App\Util\FileHandler;
 use JMS\Serializer\SerializerInterface;
 use Ramsey\Uuid\Uuid;
-use Symfony\Component\HttpFoundation\Request;
 
 class NewsletterSubscriptionService
 {
