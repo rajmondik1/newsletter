@@ -32,7 +32,7 @@ class NewsletterController extends ApiController
     {
         $options['order'] = $request->query->get('order');
         $options['category'] = $request->query->get('category');
-        dump($options);
+
         return $this->show($service->list($options));
 
     }
