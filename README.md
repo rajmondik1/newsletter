@@ -1,5 +1,8 @@
 
-## Symfony mysql ngingx boilerplate on docker with rabbitmq
+## Newsletter system with frontend and admin dashboard and Symfony4 backend 
+### Technologies:
+Symfony + Vue, data is store using filesystem
+
 #### To start run:
 ```cd app```
 #### Create env file and change required fields 
@@ -31,4 +34,4 @@ docker-compose up
  ```
 Url: http://localhost/
 
-### or just simply run ./start.sh
+# or just simply run ./start.sh
