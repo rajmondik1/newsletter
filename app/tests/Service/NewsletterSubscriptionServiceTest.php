@@ -21,9 +21,6 @@ class NewsletterSubscriptionServiceTest extends WebTestCase
     {
         parent::__construct($name, $data, $dataName);
 
-        $this->service = $this->getMockBuilder(NewsletterSubscriptionService::class)
-            ->setConstructorArgs([new FileHandler(__DIR__), new Serializer()])
-            ->getMock();
     }
 
     protected function setUp()
@@ -33,14 +30,7 @@ class NewsletterSubscriptionServiceTest extends WebTestCase
 
     public function testCreate()
     {
-        $content = '{ "email" : "petras@gmail.com", "category" : "IT"}';
-        $sub = new NewsletterSubscription();
-        $expected = [ $sub ];
 
-
-        $result = $this->service->create($content);
-
-        self::assertEquals($expected, $result);
     }
 
     public function testList()
