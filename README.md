@@ -13,11 +13,22 @@
 ## admin@admin.com test
 
 ## Client
-``` npm run serve```
+```
+ cd client/
+ npm run serve
+ ```
 Url: http://localhost:8080/
 ## Admin dashboard
-``` npm run dev```
+``` 
+cd admin/
+npm run dev
+```
 Url: http://localhost:9528/
 ## API
-``` docker-compose up ```
+``` 
+cd app/
+docker-compose up
+ ```
 Url: http://localhost/
+
+### or just simply run ./start.sh

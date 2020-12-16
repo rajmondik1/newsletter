@@ -23,7 +23,9 @@ class CategoryController extends ApiController
     {
         $categories = [
             'Business',
-            'IT'
+            'IT',
+            'Marketing',
+            'Security'
         ];
         return $this->show($categories);
     }

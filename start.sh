@@ -1,5 +1,3 @@
 #!/bin/bash
 docker-compose up -d
-cd client/
-xdg-open http://localhost:8080/ 
-npm run serve
+(cd client/; npm run serve & xdg-open http://localhost:8080/) & (cd admin/; npm run dev)
